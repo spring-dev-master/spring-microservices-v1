@@ -3,8 +3,11 @@ spring:
     name: limits-service
   config:
     import: optional:configserver:http://localhost:8888
+  profiles:
+    active: dev
 server:
   port: 8000
+
 
 limits-service.minimum: 2
 limits-service.maximum: 998
